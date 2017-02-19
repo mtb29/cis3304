@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Loan Calculator</title>
+        <script>
+            function loanCalc() {
+                var amt = parseInt(document.getElementById('value').value);
+                var perc = parseInt(document.getElementById('rate').value) / 1200;
+                var tot = parseInt(document.getElementById('months').value);
+                var pay = amt * perc / (1 - (Math.pow(1/(1 + perc), tot)));
+                document.getElementById('paym').innerHTML = "Monthly payment: $" + Math.round(pay);
+            }
+        </script>
+    </head>
+
+    <body>
+        <input id="value" type="text" name="Loan Total" placeholder="Enter Loan Amount">
+        <br>
+        <input id="rate" type="text" name="Interest Rate" placeholder="Enter Percentage Rate">
+        <br>
+        <input id="months" type="text" name="Months" placeholder="Enter Total Months">
+        <br>
+        <p id="paym"></p>
+        <br>
+        <button onclick="loanCalc()">Calculate</button>
+        <a href='w4n5calculator.html'><button>Reset</button></a>
+
+        <br><br><br><br><br>
+        <a href='index.html'><button>Home</button></a>
+    </body>
+
+</html>

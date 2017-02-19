@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        
+        <style>
+            #container {
+                width: 400px;
+                height: 400px;
+                position: relative;
+                background: Blue;
+            }
+            #animate {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background-color: White;
+                border: solid Black;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <p>
+            <button onclick="myMove()">Animate</button>
+            <a href='w4n4animation.html'><button>Reset</button></a>
+        </p> 
+
+        <div id ="container">
+            <div id ="animate"></div>
+        </div>
+
+        <script>
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            function myMove() {
+                var elem = document.getElementById("animate");
+                var pos = 0;
+                var id = setInterval(frame, 500);
+                
+                function frame() {
+                    if (pos >= 350) {
+                        clearInterval(id);
+                    } else {
+                        pos = Math.floor(Math.random() * 400);
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                        animate.style.backgroundColor = getRandomColor();
+                        document.getElementById("debug").innerHTML = "Position: " + pos;
+                    }
+                }
+            }
+        </script>
+        <p id="debug"></p>
+
+        <br><br><br><br><br>
+        <a href='index.html'><button>Home</button></a>
+    </body>
+</html>

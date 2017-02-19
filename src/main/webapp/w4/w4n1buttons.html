@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Awesome Buttons</title>
+        
+        <style>
+            body {
+                background-color: White;
+                font-size: 12px;
+                color: Black;
+            }
+        </style>
+        
+        <script>
+            function red() {
+                document.getElementById('body').style.backgroundColor = 'Red';
+                document.getElementById('body').style.color = 'White';
+                document.getElementById('body').style.fontSize = '36px';
+
+            }
+            function green() {
+                document.getElementById('body').style.backgroundColor = 'Green';
+                document.getElementById('body').style.color = '#0ff000';
+                document.getElementById('body').style.fontSize = '24px';
+            }
+            function blue() {
+                document.getElementById('body').style.backgroundColor = 'Blue';
+                document.getElementById('body').style.color = '#ff0000';
+                document.getElementById('body').style.fontSize = '12px';
+            }
+            function regular() {
+                document.getElementById('body').style.backgroundColor = 'White';
+                document.getElementById('body').style.color = '#000000';
+                document.getElementById('body').style.fontSize = '12px';
+            }
+        </script>
+    </head>
+
+    <body id="body">
+        <button onclick="red()">Red</button>
+        <button onclick="green()">Green</button>
+        <button onclick="blue()">Blue</button>
+        <button onclick="regular()">Default</button>
+        <h1>Matt's Awesome Page</h1>
+        <br><br><br><br><br>
+        <a href='index.html'><button>Home</button></a>
+    </body>
+</html>

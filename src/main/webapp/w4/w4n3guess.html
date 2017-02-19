@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Guessing Game</title>
+
+        <script>
+            var answer = Math.floor(Math.random() * 100) + 1;
+            var count = 0;
+
+            function guesses() {
+                var userGuess = parseInt(document.getElementById('guess').value);
+
+                if (userGuess === 4242) {
+                    document.getElementById('result').innerHTML = "The answer to life, the universe and everything is 42, not 4242!";
+                } else if (userGuess < 1 || userGuess > 100) {
+                    document.getElementById('result').innerHTML = "Your guess must be above 0 and below 101!";
+                } else if (userGuess === answer) {
+                    document.getElementById('result').innerHTML = "Winner winner chicken dinner! You guessed correctly in " + count + " tries.";
+                } else if (userGuess < answer) {
+                    document.getElementById('result').innerHTML = "Higher";
+                } else {
+                    document.getElementById('result').innerHTML = "Lower";
+                }
+                count++;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Matt's Guessing Game</h1>
+        <p>Guess the number between 1 and 100</p>
+        <input id="guess" type="text" name="guessTF" placeholder="1-100">
+        <button onclick="guesses()">Submit</button>
+        <p id="result"></p>
+        <br><br><br><br><br>
+        <a href='index.html'><button>Home</button></a>
+    </body>
+
+</html>

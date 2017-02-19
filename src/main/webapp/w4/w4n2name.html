@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Hello World!</title>
+        <script>
+            function hello() {
+                document.getElementById('header').innerHTML = "Nice to meet you " + document.getElementById('name').value + "!";
+            }
+        </script>
+    </head>
+
+    <body>
+        <input id="name" type="text" name="name" placeholder="Enter Name">
+        <button onclick="hello()">Click</button>
+        <h1 id="header"></h1>
+
+        <br><br><br><br><br>
+        <a href='index.html'><button>Home</button></a>
+    </body>
+
+</html>
