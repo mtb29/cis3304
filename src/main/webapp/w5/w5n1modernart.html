@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Modern Art</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            canvas {
+                background: #eee;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
     </head>
-    
+
     <body>
+        <h1>Matt's Awesome Modern Art</h1>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+            function reload() {
+                window.location.reload();
+            }
+
+            function randomColor() {
+                var myRed = Math.floor((Math.random() * 255)) + 1;
+                var myGreen = Math.floor((Math.random() * 255)) + 1;
+                var myBlue = Math.floor((Math.random() * 255)) + 1;
+                return "rgb(" + myRed + "," + myGreen + "," + myBlue + ")";
+            }
+
+            function circle(ctx) {
+                var myRadius = Math.floor((Math.random() * 100) + 10);
+                var myX = Math.floor((Math.random() * 600)) + 1;
+                var myY = Math.floor((Math.random() * 400)) + 1;
+                ctx.beginPath();
+                ctx.arc(myX, myY, myRadius, 0, Math.PI * 2, false);
+                ctx.fillStyle = randomColor();
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            function rect(ctx) {
+                var myWidth = Math.floor((Math.random() * 100) + 10);
+                var myHeight = Math.floor((Math.random() * 100) + 10);
+                var myX = Math.floor((Math.random() * 600)) + 1;
+                var myY = Math.floor((Math.random() * 400)) + 1;
+                ctx.beginPath();
+                ctx.rect(myX, myY, myWidth, myHeight);
+                ctx.fillStyle = randomColor();
+                ;
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            for (i = 0; i < 20; i++) {
+                circle(ctx);
+                rect(ctx);
+            }
+
+            // draw a line
+            ctx.beginPath();
+            ctx.moveTo(100, 150);
+            ctx.lineTo(450, 50);
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = '#ff0000';
+            ctx.stroke();
+
+            setInterval(reload, 1000);
+        </script>
+
         <br><br><br><br><br>
         <a href='index.html'><button>Home</button></a>
     </body>
+
 </html>
