@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>w8n1 Interest Calculator</title>
+        <style type="text/css">
+            body {
+                background: #eeeeee;
+                color: green;
+                font-family: Tahoma, Geneva, sans-sarif;
+                font-size: large;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24pt;
+                font-style: normal;
+                font-weight: bolder;
+                font-varient: small-caps;
+            }
+    </style>
+    </head>
+    <body>
+        <h1>Matt's Simple Interest Calculator</h1>
+        <p>Please enter the following information and click the submit button:</p>
+        
+        <form name='interest' method='get' action='w8n1.php'>
+            <p>Principle:
+                <input type='number' name='principle' size='10' required placeholder='Amount'>
+            </p>
+            <p>Interest Rate:
+                <input type='text' name='rate' size='10' required placeholder='Rate' pattern='^\d+(\.\d*)?$'>%
+            </p>
+            <input type='submit' value='Submit'>
+        </form>
+    </body>
+</html>
