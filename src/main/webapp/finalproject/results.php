@@ -18,7 +18,7 @@
                 $answer = htmlspecialchars($answer);
                 echo "Guess: $guess <br/>";
                 echo "Answer: $answer <br/>";
-                if ($guess == $answer) {
+                if (strcasecmp($guess, $answer) == 0) {
                     $score++;
                 }
             }
