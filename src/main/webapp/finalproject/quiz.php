@@ -3,7 +3,7 @@
         <title>Quiz</title>
     </head>
     <body>
-        <p><strong>Type the answer, not the letter! (Case insensitive)</strong></p>
+        <p><strong>Answers are case insensitive.</strong></p>
         <form action="results.php" method="post">
             <?php
             if (empty($_GET['quizid']) || empty($_GET['quiztype']) || !is_numeric($_GET['quizid']) || $_GET['quizid'] < 1 || $_GET['quizid'] > 3) {
@@ -26,10 +26,10 @@
                     $a1 = htmlspecialchars($row[a1]);
                     $a2 = htmlspecialchars($row[a2]);
                     $a3 = htmlspecialchars($row[a3]);
-                    echo "Question $count: <strong>$question</strong><br/><br/>";
-                    echo "A. $a1<br/>";
-                    echo "B. $a2<br/>";
-                    echo "C. $a3<br/><br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
+                    echo "$count: <strong>$question</strong><br/><br/>";
+                    echo "A.&nbsp;&nbsp;&nbsp;&nbsp;$a1<br/>";
+                    echo "B.&nbsp;&nbsp;&nbsp;&nbsp;$a2<br/>";
+                    echo "C.&nbsp;&nbsp;&nbsp;&nbsp;$a3<br/><br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
                     echo "<input type='hidden' name='quiztype' value=\"$quiztype\">";
                     echo "<input type='hidden' name=\"answer$count\" value=\"$answer[$count]\">";
                 }

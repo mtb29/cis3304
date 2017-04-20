@@ -23,8 +23,8 @@
                 }
             }
 
-            $results = "You got " . ($score) . " out of " . ($questioncount) . " correct on the " . ($quiztype) . " quiz!";
-            echo "$results<br/><br/>";
+            $results = "You got " . ($score) . " out of " . ($questioncount) . " correct on the " . ($quiztype) . " quiz! (" . ($score / $questioncount * 100) . "%)";
+            echo "<br/>$results<br/><br/>";
             echo "<input type='hidden' name='results' value=\"$results\">";
             ?>
             Email: <input type="text" name="email" value="">
