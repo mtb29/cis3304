@@ -8,7 +8,7 @@
         try {
             $dbh = new PDO('mysql:host=localhost;dbname=mtb29', 'mtb29', 'mucis');
             foreach ($dbh->query('SELECT * FROM quiz_types') as $row) {
-                echo "Quiz $row[id]: <a href='quiz.php?quizid=$row[id]'>$row[quiz_type]</a><br/><br/>";
+                echo "Quiz $row[id]: <a href='quiz.php?quizid=$row[id]&quiztype=$row[quiz_type]'>$row[quiz_type]</a><br/><br/>";
             }
             $dbh = null;
         } catch (PDOException $e) {

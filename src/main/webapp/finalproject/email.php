@@ -4,12 +4,17 @@
     </head>
     <body>
         <?php
-        if (mail($_POST['email'], 'Quiz Results', $_POST['results'])) {
-            echo 'The results have been sent to your email.<br/>';
+        $email = $_POST['email'];
+        $results = $_POST['results'];
+        preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b', $email, $matches);
+
+        if (empty($email) || empty($matches[0])) {
+            echo "You have entered an invalid email address. Go back and try again.";
         } else {
-            echo 'You entered an invalid email.<br/><br/>';
+            mail($email, 'Quiz Results', $results);
+            echo "The results have been sent to $email.<br/>";
         }
         ?>
-        <a href='quizlist.php'><button>Home</button></a>
+        <a href="quizlist.php"><button>Home</button></a>
     </body>
 </html>
