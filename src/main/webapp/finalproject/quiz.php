@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Quiz</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <p><strong>Answers are case insensitive. You may answer by typing the letter or the answer.</strong></p>

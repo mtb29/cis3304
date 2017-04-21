@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Quiz List</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1>Matt's Quiz List</h1>

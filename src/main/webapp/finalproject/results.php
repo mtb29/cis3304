@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Quiz Results</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <form action="email.php" method="post">

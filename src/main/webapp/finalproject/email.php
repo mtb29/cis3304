@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Email Quiz Results</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <?php
