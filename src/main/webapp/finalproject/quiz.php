@@ -6,7 +6,7 @@
         <p><strong>Answers are case insensitive. You may answer by typing the letter or the answer.</strong></p>
         <form action="results.php" method="post">
             <?php
-            if (empty($_GET['quizid']) || empty($_GET['quiztype']) || !is_numeric($_GET['quizid']) || $_GET['quizid'] < 1 || $_GET['quizid'] > 3) {
+            if (empty($_GET['quizid']) || empty($_GET['quiztype']) || !is_numeric($_GET['quizid']) || $_GET['quizid'] < 1) {
                 $quizid = 1;
                 $quiztype = "mySQL";
             } else {
