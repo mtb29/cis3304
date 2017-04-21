@@ -16,9 +16,15 @@
                 $answer = "answer" . $i;
                 $answer = $_POST["$answer"];
                 $answer = htmlspecialchars($answer);
+                $answerletter = "answerletter" . $i;
+                $answerletter = $_POST["$answerletter"];
                 echo "Guess: $guess <br/>";
                 echo "Answer: $answer <br/>";
+                echo "Answer letter: $answerletter <br/>";
                 if (strcasecmp($guess, $answer) == 0) {
+                    $score++;
+                }
+                else if (strcasecmp($guess, $answerletter) == 0) {
                     $score++;
                 }
             }
