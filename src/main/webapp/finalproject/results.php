@@ -20,8 +20,7 @@
                 $answerletter = "answerletter" . $i;
                 $answerletter = $_POST["$answerletter"];
                 echo "Guess: $guess <br/>";
-                echo "Answer: $answer <br/>";
-                echo "Answer letter: $answerletter <br/>";
+                echo "Answer: $answerletter / $answer <br/><br/>";
                 if (strcasecmp($guess, $answer) == 0) {
                     $score++;
                 }
