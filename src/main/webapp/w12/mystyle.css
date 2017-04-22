@@ -1,0 +1,89 @@
+/* mystyle.css by John Phillips and Matthew Brady on 4/21/2017 
+ * used by the cis3304 notebook example 
+ */
+
+body {
+    background: #369;
+    color: #ddd;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: medium;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+header {
+    font-size: large;
+}
+
+footer {
+    font-size: x-small;
+    margin-top: 8em;
+}
+
+h1 {
+    color: #eee;
+    font-family: Courier, monospace;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+textarea {
+    background: #eee;	
+    width: 600px;
+    height: 120px;
+    border: 3px solid #cccccc;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+a:link { 
+    color: #fa1; 
+    text-decoration: none;
+}
+
+a:visited { 
+    color: #fa1; 
+    text-decoration: none;
+}
+
+a:hover { 
+    color: #0f0; 
+    text-decoration: underline;
+}
+
+a:active { 
+    color: #ff0; 
+    text-decoration: underline;
+}
+
+.controls {
+    background: #d66;
+    color: #222;
+    font-size: small;
+    text-align: right;
+    padding: 5px 5px 5px 10px;
+}
+
+.rowid {
+    background: #ccc;
+    color: #222;
+    font-size: small;
+    text-align: left;
+    padding: 5px 5px 5px 10px;
+}
+
+.message {
+    background: #eee;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.large {
+    font-size: x-large;
+}
+
+
