@@ -19,13 +19,14 @@
                 $answer = htmlspecialchars($answer);
                 $answerletter = "answerletter" . $i;
                 $answerletter = $_POST["$answerletter"];
-                echo "Guess: $guess <br/>";
-                echo "Answer: $answerletter / $answer <br/><br/>";
-                if (strcasecmp($guess, $answer) == 0) {
+                echo "$i. Guess: $guess <br/>";
+                echo "Answer: $answerletter / $answer <br/>";
+                if (strcasecmp($guess, $answer) == 0 || strcasecmp($guess, $answerletter) == 0) {
                     $score++;
+                    echo "Correct!<br/><br/>";
                 }
-                else if (strcasecmp($guess, $answerletter) == 0) {
-                    $score++;
+                else {
+                    echo "Incorrect!<br/><br/>";
                 }
             }
 

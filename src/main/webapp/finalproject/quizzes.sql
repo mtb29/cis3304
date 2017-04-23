@@ -12,7 +12,7 @@ CREATE TABLE quiz_types (
     PRIMARY KEY (id)
 );
 
-INSERT INTO quiz_types (quiz_type) VALUES ('mySQL'), ('HTML'), ('PHP'), ('Math'), ('Puppies/Dogs');;
+INSERT INTO quiz_types (quiz_type) VALUES ('mySQL'), ('HTML'), ('PHP'), ('Math'), ('Puppies/Dogs'), ('Science True/False');
 
 DROP TABLE IF EXISTS quiz_questions;
 
@@ -22,7 +22,7 @@ CREATE TABLE quiz_questions (
     question VARCHAR(128) NOT NULL,
     a1 VARCHAR(128) NOT NULL,
     a2 VARCHAR(128) NOT NULL,
-    a3 VARCHAR(128) NOT NULL,
+    a3 VARCHAR(128) NULL,
     answer VARCHAR(128) NOT NULL,
     PRIMARY KEY (id)
 );
@@ -51,4 +51,16 @@ INSERT INTO quiz_questions (quiz_type, question, a1, a2, a3, answer) VALUES
     (5, 'Of the three, which is an actual breed of dog?', 'ShihTzu', 'Kazuul', 'Snioooper', 'ShihTzu'),
     (5, 'What dog breed is Lassie?', 'Golden Retriever', 'Collie', 'Australian Shepherd', 'Collie'),
     (5, 'What dog breed is Scooby Doo?', 'Great Dane', 'Saint Bernard', 'Poodle', 'Great Dane'),
-    (5, 'In Scooby Doo 2 Monsters Unleashed, Scooby Doo comes to a conclusion, which is?', 'Yoinks!', 'Great Scott!', 'Bunny!', 'Bunny!');
+    (5, 'In Scooby Doo 2 Monsters Unleashed, Scooby Doo comes to a conclusion, which is?', 'Yoinks!', 'Great Scott!', 'Bunny!', 'Bunny!'),
+    (6, 'A full moon happens when Earth is between the Sun and the Moon?', 'True', 'False', '', 'True'),
+    (6, 'Aluminium is great at conducting heat?', 'True', 'False', '', 'True'),
+    (6, 'During photosynthesis, plans make glucose and carbon dioxide?', 'True', 'False', '', 'False'),
+    (6, 'NA is the chemical symbol for calcium?', 'True', 'False', '', 'False'),
+    (6, 'Water boils at 100 degrees celcius?', 'True', 'False', '', 'True'),
+    (6, 'Nitrogen is the most abundant gas in the Earths atmosphere?', 'True', 'False', '', 'True'),
+    (6, 'The cornea of your eye is where the light receptors are?', 'True', 'False', '', 'False'),
+    (6, 'Arteries carry blood towards the heart?', 'True', 'False', '', 'False'),
+    (6, 'Igneous rocks are produced when magma hardens?', 'True', 'False', '', 'True'),
+    (6, 'The mitochondria is a type of organelle?', 'True', 'False', '', 'True');
+
+    
