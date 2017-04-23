@@ -54,7 +54,7 @@ INSERT INTO quiz_questions (quiz_type, question, a1, a2, a3, answer) VALUES
     (5, 'In Scooby Doo 2 Monsters Unleashed, Scooby Doo comes to a conclusion, which is?', 'Yoinks!', 'Great Scott!', 'Bunny!', 'Bunny!'),
     (6, 'A full moon happens when Earth is between the Sun and the Moon?', 'True', 'False', '', 'True'),
     (6, 'Aluminium is great at conducting heat?', 'True', 'False', '', 'True'),
-    (6, 'During photosynthesis, plans make glucose and carbon dioxide?', 'True', 'False', '', 'False'),
+    (6, 'During photosynthesis, plants make glucose and carbon dioxide?', 'True', 'False', '', 'False'),
     (6, 'NA is the chemical symbol for calcium?', 'True', 'False', '', 'False'),
     (6, 'Water boils at 100 degrees celcius?', 'True', 'False', '', 'True'),
     (6, 'Nitrogen is the most abundant gas in the Earths atmosphere?', 'True', 'False', '', 'True'),

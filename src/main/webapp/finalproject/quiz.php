@@ -43,7 +43,7 @@
                     if (strlen($a3) > 0) {
                         echo "C.&nbsp;&nbsp;&nbsp;&nbsp;$a3<br/><br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
                     } else {
-                        echo "<br/><br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
+                        echo "<br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
                     }
                     echo "<input type='hidden' name='quiztype' value=\"$quiztype\">";
                     echo "<input type='hidden' name=\"answer$count\" value=\"$answer[$count]\">";
