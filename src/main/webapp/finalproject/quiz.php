@@ -46,6 +46,7 @@
                         echo "<br/><input type ='text' name=\"guess$count\" value=''><br/><br/>";
                     }
                     echo "<input type='hidden' name='quiztype' value=\"$quiztype\">";
+                    echo "<input type='hidden' name=\"question$count\" value=\"$question\">";
                     echo "<input type='hidden' name=\"answer$count\" value=\"$answer[$count]\">";
                     echo "<input type='hidden' name=\"answerletter$count\" value=\"$answerletter\">";
                 }

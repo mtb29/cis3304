@@ -11,6 +11,8 @@
             $questioncount = $_POST['questioncount'];
 
             for ($i = 1; $i <= $questioncount; $i++) {
+                $question = "question" . $i;
+                $question = $_POST["$question"];
                 $guess = "guess" . $i;
                 $guess = $_POST["$guess"];
                 $guess = htmlspecialchars($guess);
@@ -19,7 +21,8 @@
                 $answer = htmlspecialchars($answer);
                 $answerletter = "answerletter" . $i;
                 $answerletter = $_POST["$answerletter"];
-                echo "$i. Guess: $guess <br/>";
+                echo "$i. $question <br/>";
+                echo "Guess: $guess <br/>";
                 echo "Answer: $answerletter / $answer <br/>";
                 if (strcasecmp($guess, $answer) == 0 || strcasecmp($guess, $answerletter) == 0) {
                     $score++;
